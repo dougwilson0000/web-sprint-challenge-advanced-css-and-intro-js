@@ -234,8 +234,6 @@ function getArtistByIndex(array, index) {
   return `the artist at index ${index} is ${array[index].name}`
 }
 
-console.log(getArtistByIndex(artists, 0));
-
 
 
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
@@ -278,8 +276,6 @@ function removeArtist(array, index) {
   return array.length
 }
 
-console.log(removeArtist(artists, 0));
-
 /* 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6: 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 
 Use addArtist to do the following: 
 1. Receive an array
@@ -318,10 +314,17 @@ Use lotsOfArt to do the following:
 
 For example lotsOfArt(artists); will return ["Amedeo Modigliani", "Rene Magritte", ... "Albrecht Dürer"]*/
 
-function lotsOfArt(/*Your Code Here*/) {
-  /*Your Code Here*/
+function lotsOfArt(array) {
+  const moreThan100 = [];
+  for(let i = 0; i < array.length; i++) {
+    if(array[i].paintings > 100) {
+      moreThan100.push(array[i].name);
+    }
+  }
+  return moreThan100;
 }
 
+console.log(lotsOfArt(artists));
 
 /* ***** END OF TASKS ***** */
 
